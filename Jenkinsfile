@@ -1,9 +1,12 @@
 pipeline {
   agent { label 'master' }
+  tools {
+    maven 'M3'
+  }
   stages {
     stage('checkout') {
       steps {
-        echo "Hello"
+        git 'https://github.com/bhaskaranp/myProject.git'
       }
     }   
   }
