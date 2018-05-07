@@ -1,9 +1,10 @@
 pipeline {
-	stages {
-		stage('Test') {
-			steps {
-				sh 'echo "Hello"'
-			}
-		}
-	}
+  agent { label 'linux' }
+  stages {
+    stage('checkout') {
+      steps {
+        echo "Hello"
+      }
+    }   
+  }
 }
